@@ -47,7 +47,7 @@ impl Build {
         let include_dir = out_dir.join("include");
 
         let source_dir_base = Path::new(env!("CARGO_MANIFEST_DIR"));
-        let source_dir ="lua";
+        let source_dir = source_dir_base.join("lua");
 
         if lib_dir.exists() {
             fs::remove_dir_all(&lib_dir).unwrap();
